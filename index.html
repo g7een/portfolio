@@ -16,7 +16,7 @@
 
     <link rel="icon" href="images/polar-bear.png" type="image/png">
     <!--FontAwesome-->
-    <title>Yadlapati • Home</title>
+    <title>• home</title>
 
 </head>
 
@@ -31,7 +31,7 @@
                     about
                 </div>
                 <div class="navigation-tab models">
-                    models
+                    passion
                 </div>
                 <div class="navigation-tab projects">
                     projects
@@ -61,7 +61,7 @@
 
             <div class="viewmodels">
                 <div class="modelsheader">
-                    <h2>Models</h2>
+                    <h2>Software / Passion Focused</h2>
                 </div>
                 <p>My interest in 3D modeling spans both design based on popular media and my interests as well as CAD models for my projects complete with documentation. I use both <a href="https://www.blender.org/download/">Blender</a> and <a href="https://www.freecad.org/downloads.php?lang=en">FreeCAD</a> for my models.</p>
                 <!--Template Note: model positions are hardcoded-->
@@ -105,10 +105,11 @@
                     <div class="gallery-divider">•</div>
                     <div class="gallery-item">
                         <div class="item-heading">
-                            CPU design w/ Digital
+                            RISC-V processor design w/ Logisim
                         </div>
+                        <div class="item-picture riscv"></div>
                         <div class="item-description">
-                            <p><em class="date">~2.15.2025</em> Link ref </p>
+                            <p><em class="date">~2.15.2025</em> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nemo. Provident officiis asperiores enim dicta quos eligendi, quasi explicabo, vel corporis maxime officia porro ut incidunt necessitatibus aspernatur assumenda libero. <a>[browse files]</a> </p>
                         </div>
                     </div>
                     <div class="gallery-divider">•</div>
@@ -164,12 +165,68 @@
 
             <div class="bottom">
                 <div class="bottom-left">
-                    <p>Socials</p>
+                    <p><em>Socials</em></p>
                 </div>
                 <div class="socials"><a href="https://www.x.com/rasmalaifan65">Twitter</a> / <a href="https://github.com/g7een">Github</a> / <a href="https://www.x.com/rasmalaifan65">LinkedIn</a> / <a href="mailto:amityadlapati@gmail.com">Email</a></div>
             </div>
-            <div class="closer"><div class="bottom-img"></div></div>
+            <div class="calendar">
+                ...
+            </div>
+            <div class="closer"><br><br><div class="bottom-img"></div></div>
+
+            <!--Github Calendar Heatmap | src: https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js-->
+            <link
+                rel="stylesheet"
+                href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+            />
+
+            <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+            <script>
+                GitHubCalendar(".calendar", "g7een", {
+                    responsive: true,
+                    tooltips: true,
+                });
+
+                setTimeout(() => {
+                    const graph = document.querySelector(".calendar .position-relative");
+
+                    document.querySelector(".calendar").replaceChildren(graph);
+                }, 500);
+            </script>
+
+            <style>
+                
+                .calendar {
+                    flex: 0 0 auto !important;
+                    align-self: flex-start !important;
+                    height: auto !important;
+                    min-height: 0 !important;
+                    padding: 5px !important;
+                    border: none;
+                    
+                }
+
+                .calendar > :not(.position-relative) {
+                    display: none;
+                }
+
+                .calendar .sr-only{
+                    display:none;
+                }
+
+                .calendar .position-relative a{
+                    display: none;
+                }
+
+                .calendar .float-right.color-fg-muted.d-flex.flex-items-center{
+                    display: none;
+                }
+
+            </style>
+
         </div>
+
 
    </div>
     
