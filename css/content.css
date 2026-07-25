@@ -6,7 +6,7 @@
 
 body {
     background: #c9c9c918;
-    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: "Newsreader", sans-serif;
     color: black;
     overflow-x: hidden;
 }
@@ -22,7 +22,7 @@ h2{
 }
 
 p{
-    font-weight: 300;
+    font-weight: 350;
     font-size: 14px;
 }
 
@@ -142,15 +142,15 @@ a{
 
 .opening-image{
     margin-top: 30px;
-    width: 175px;
-    height: 175px;
+    width: 75px;
+    height: 75px;
 
     background-image: url(/images/Greeting.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    border-radius: 50%;
+    border-radius: 20%;
     overflow: hidden;
 }
 
@@ -265,7 +265,7 @@ label {
 
 input, textarea {
     background: #c9c9c94a;
-    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: "Newsreader", sans-serif;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
