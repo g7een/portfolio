@@ -174,9 +174,9 @@ a{
 
 .riscv{
     background-image: url(/images/project1.png);
-    max-width: 600px;
-    height: 200px;
-    min-width: 500px;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 200;
 }
 
 .gallery{
@@ -192,7 +192,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .gallery-item .item-heading{
@@ -224,7 +224,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .bottom-img{
