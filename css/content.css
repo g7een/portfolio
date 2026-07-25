@@ -213,6 +213,13 @@ a{
     gap: 15px;
 }
 
+.form-status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgba(0, 0, 0, 0.370);
+}
+
 .bottom{
     display: flex;
     flex-direction: row;
