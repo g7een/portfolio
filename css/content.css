@@ -28,7 +28,7 @@ p{
 
 a{
     text-decoration: underline;
-    color: rgb(46, 131, 196)
+    color: rgb(74, 110, 165)
 }
 
 .date{
@@ -93,6 +93,28 @@ a{
     align-items: center;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.713);
+}
+
+.dark-mode-shift{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    border-color: #0000005c;
+    margin: 5px 0;
+    border-width: 1px;
+    border-radius: 25%;
+    border-style: solid;
+    cursor: pointer;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.09);
+}
+
+.dark-mode-shift i{
+    color:#363636a1;
 }
 
 .about{
@@ -336,4 +358,92 @@ textarea {
     .navigation{
         display: none;
     }
+}
+
+
+body{
+    transition: background .35s ease, color .35s ease;
+}
+
+a,
+.navigation-tab,
+.dark-mode-shift,
+input,
+textarea,
+.submit-btn,
+.horizontal-rule::before,
+.horizontal-rule::after{
+    transition: .35s ease;
+}
+
+/* DARK TRANSITIONS */
+
+body.dark-mode{
+    background:#16181c;
+    color:#f2f2f2;
+}
+
+body.dark-mode .date{
+    color:#bcbcbc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .navigation-tab,
+body.dark-mode .form-status,
+body.dark-mode .gallery-divider{
+    color:#f2f2f2;
+}
+
+body.dark-mode a{
+    color:rgb(123,165,235);
+}
+
+body.dark-mode .horizontal-rule::before,
+body.dark-mode .horizontal-rule::after{
+    background:#ffffff20;
+}
+
+body.dark-mode input,
+body.dark-mode textarea{
+    background:#24272d;
+    color:#f2f2f2;
+    border-color:#40444c;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#9ea5af;
+}
+
+body.dark-mode .submit-btn{
+    background:#2d3138;
+    color:#e6e6e6;
+}
+
+body.dark-mode .submit-btn:hover{
+    background:#3b4048;
+}
+
+body.dark-mode .dark-mode-shift{
+    border-color:#555;
+}
+
+body.dark-mode .dark-mode-shift i{
+    color:#f2f2f2;
+}
+
+body.dark-mode .calendar td.ContributionCalendar-day[data-level="0"] {
+    background: rgb(117, 118, 120) !important;
+}
+
+body.dark-mode .navigation-tab{
+    border-color: #00000000;
+}
+
+body.dark-mode .dark-mode-shift{
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.09);
+    border-color: rgb(176, 173, 173);
 }

@@ -56,13 +56,44 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
+    const SCROLL_OFFSET = 60;
+
     Object.keys(tabs).forEach(section => {
         tabs[section].addEventListener("click", () => {
-            sections[section].scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+
+            const y =
+                sections[section].getBoundingClientRect().top +
+                window.pageYOffset -
+                SCROLL_OFFSET;
+
+            window.scrollTo({
+                top: y,
+                behavior: "smooth"
             });
+
         });
     });
+
+});
+
+const darkButton = document.querySelector(".dark-mode-shift");
+const icon = darkButton.querySelector("i");
+
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+    icon.classList.replace("fa-moon","fa-lightbulb");
+}
+
+darkButton.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        icon.classList.replace("fa-moon","fa-lightbulb");
+        localStorage.setItem("theme","dark");
+    }else{
+        icon.classList.replace("fa-lightbulb","fa-moon");
+        localStorage.setItem("theme","light");
+    }
 
 });
