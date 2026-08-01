@@ -105,12 +105,13 @@ a{
 
     border-color: #0000005c;
     margin: 5px 0;
-    border-width: 1px;
+    border-width: 0px;
     border-radius: 25%;
     border-style: solid;
     cursor: pointer;
+    z-index: 99;
 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.09);
 }
 
 .dark-mode-shift i{
@@ -194,11 +195,19 @@ a{
     background-position: center;
 }
 
+/* PROJECT IMAGES */
 .riscv{
     background-image: url(/images/project1.png);
     max-width: 500px;
     width: 100%;
     aspect-ratio: 500 / 200;
+}
+
+.lexus{
+    background-image: url(/images/project2.png);
+    max-width: 417px;
+    width: 100%;
+    aspect-ratio: 417 / 200;
 }
 
 .gallery{
@@ -362,7 +371,7 @@ textarea {
 
 
 body{
-    transition: background .35s ease, color .35s ease;
+    transition: background .05s ease, color .05s ease;
 }
 
 a,
@@ -372,8 +381,9 @@ input,
 textarea,
 .submit-btn,
 .horizontal-rule::before,
-.horizontal-rule::after{
-    transition: .35s ease;
+.horizontal-rule::after,
+.date{
+    transition: .05s ease;
 }
 
 /* DARK TRANSITIONS */
@@ -384,7 +394,7 @@ body.dark-mode{
 }
 
 body.dark-mode .date{
-    color:#bcbcbc;
+    color: rgba(255, 255, 255, 0.824);
 }
 
 body.dark-mode h1,
